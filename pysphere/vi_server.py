@@ -800,3 +800,12 @@ class VIServer:
 
         ret = self.get_resource_pools()
         return dict([(v,k) for k,v in ret.iteritems()])
+
+class UnsecuredVIServer(VIServer):
+    def __init__(self):
+        VIServer.__init__(self)
+
+    def unsecure_connect(self, host, user, password, trace_file=None, sock_timeout=None, **kw):
+        import ssl
+        kw['transdict']={"context":ssl._create_unverified_context()}
+        return self.connect(host, user, password, trace_file, sock_timeout, **kw)
