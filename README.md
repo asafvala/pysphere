@@ -3,8 +3,8 @@
 ## IMPORTANT NOTICE
 
  * This project has been migrated from http://pysphere.googlecode.com
+ * This (so far) extends the original by adding the `UnsecuredVIServer` used to connect over non-authorised vSpheres using the `unsecure_connect` method
 
- * Since 2013 I'm NOT LONGER MAINTAINING this project. I moved to a new country and started working with new technologies so I haven't been able to follow up. Since then a few forks from pysphere have been created and VMWare released its official [python bindings for vSphere](https://developercenter.vmware.com/-/vmware-vsphere-api-python-bindings) that you may want to check out.
 
 
 ## Python API for interacting with the vSphere Web Services SDK.
@@ -28,20 +28,6 @@ An of course, you can use it to access all the vSphere API through python.
 It's built upon a slightly modified version of [ZSI](http://pywebsvcs.sourceforge.net/zsi.html) (that comes bundled-in) which makes it really fast in contrast to other python SOAP libraries that don't provide code generation.
 
 ### Installation
-
-The simplest way is using [setuptools](http://pypi.python.org/pypi/setuptools)' easy_install:
-
-```
-easy_install -U pysphere
-```
-
-Or using [pip](http://pypi.python.org/pypi/pip):
-
-```
-pip install -U pysphere
-```
-
-You can aslo find the source package and windows installer in the [downloads](http://code.google.com/p/pysphere/downloads/list) section. To install it from the source package:
 
 1. Unzip the package
 2. run: `python setup.py install`
