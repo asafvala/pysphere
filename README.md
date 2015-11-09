@@ -36,13 +36,18 @@ It's built upon a slightly modified version of [ZSI](http://pywebsvcs.sourceforg
 Here's how you power on a virtual machine. See also the [getting started guide](http://code.google.com/p/pysphere/wiki/GettingStarted) and the project's [wiki](http://code.google.com/p/pysphere/w/list) with the full documentation.
 
 ```
->>> from pysphere import VIServer
+>>> from pysphere import VIServer,UnsecuredVIServer
 >>> server = VIServer()
 >>> server.connect("my.esx.host.com", "myusername", "secret")
 >>> vm = server.get_vm_by_path("[datastore] path/to/file.vmx")
 >>> vm.power_on()
 >>> print vm.get_status()
 POWERED ON
+>>>
+>>> server_unsecured = UnsecuredVIServer()
+>>> server_unsecured.unsecure_connect("my.esx.host.com", "myusername", "secret")
+>>> ...
+
 ```
 
 ### Discussion Group
