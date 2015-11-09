@@ -1,10 +1,9 @@
 # PySphere 
 
-## IMPORTANT NOTICE
 
- * This project has been migrated from http://pysphere.googlecode.com
+
+## Change Log
  * This (so far) extends the original by adding the `UnsecuredVIServer` used to connect over non-authorised vSpheres using the `unsecure_connect` method
-
 
 
 ## Python API for interacting with the vSphere Web Services SDK.
